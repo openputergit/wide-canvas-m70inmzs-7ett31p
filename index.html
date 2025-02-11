@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permissionless | Streetwear</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+        :root {
+            --neon-green: #39FF14;
+        }
+
+        body {
+            background-color: #000;
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
+
+        .neon-text {
+            color: var(--neon-green);
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .neon-border {
+            border: 2px solid var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--neon-green);
+        }
+
+        .nav-link:hover {
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green);
+        }
+
+        .custom-shape {
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-90 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl neon-text font-bold">PERMISSIONLESS</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#new" class="nav-link">New Arrivals</a>
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <i class="bi bi-search text-xl nav-link"></i>
+                <i class="bi bi-bag text-xl nav-link"></i>
+                <button class="md:hidden">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex items-center relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-6xl neon-text font-bold mb-6">BREAK FREE</h1>
+                    <p class="text-xl mb-8">Limited edition streetwear for the bold and rebellious.</p>
+                    <button class="neon-border bg-black px-8 py-3 text-lg neon-text hover:bg-green-900 transition duration-300">
+                        SHOP NOW
+                    </button>
+                </div>
+                <div class="relative">
+                    <div class="custom-shape bg-green-500 bg-opacity-20 p-12">
+                        <img src="https://images.unsplash.com/photo-1515600051222-a3c338ff16f6" alt="Featured Product" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section id="new" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl neon-text font-bold mb-12 text-center">NEW ARRIVALS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Cards -->
+                <div class="product-card neon-border p-4 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Product" class="w-full h-80 object-cover mb-4">
+                    <h3 class="text-xl mb-2">Cyber Hoodie</h3>
+                    <p class="text-gray-400 mb-4">$89.99</p>
+                    <button class="w-full neon-border bg-black py-2 neon-text hover:bg-green-900 transition duration-300">
+                        ADD TO CART
+                    </button>
+                </div>
+                <div class="product-card neon-border p-4 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9" alt="Product" class="w-full h-80 object-cover mb-4">
+                    <h3 class="text-xl mb-2">Tech Tee</h3>
+                    <p class="text-gray-400 mb-4">$49.99</p>
+                    <button class="w-full neon-border bg-black py-2 neon-text hover:bg-green-900 transition duration-300">
+                        ADD TO CART
+                    </button>
+                </div>
+                <div class="product-card neon-border p-4 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1578681994506-b8f463449011" alt="Product" class="w-full h-80 object-cover mb-4">
+                    <h3 class="text-xl mb-2">Matrix Jacket</h3>
+                    <p class="text-gray-400 mb-4">$129.99</p>
+                    <button class="w-full neon-border bg-black py-2 neon-text hover:bg-green-900 transition duration-300">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black bg-opacity-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl neon-text font-bold mb-6">OUR STORY</h2>
+                    <p class="text-lg mb-6">Born from the underground tech culture, Permissionless represents the fusion of streetwear and cyberpunk aesthetics. We create clothing for those who dare to stand out and challenge the status quo.</p>
+                    <button class="neon-border bg-black px-8 py-3 neon-text hover:bg-green-900 transition duration-300">
+                        LEARN MORE
+                    </button>
+                </div>
+                <div class="custom-shape neon-border p-8">
+                    <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3" alt="About" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl neon-text font-bold mb-6">JOIN THE REVOLUTION</h2>
+            <p class="text-lg mb-8">Subscribe for exclusive drops and special offers.</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Enter your email" class="flex-1 p-3 bg-black neon-border text-white">
+                <button class="neon-border bg-black px-6 neon-text hover:bg-green-900 transition duration-300">
+                    SUBSCRIBE
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-green-500">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl neon-text font-bold mb-4">PERMISSIONLESS</h3>
+                    <p class="text-gray-400">Breaking boundaries in streetwear.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Shop</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-green-500">New Arrivals</a></li>
+                        <li><a href="#" class="hover:text-green-500">Best Sellers</a></li>
+                        <li><a href="#" class="hover:text-green-500">Collections</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Help</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-green-500">FAQ</a></li>
+                        <li><a href="#" class="hover:text-green-500">Shipping</a></li>
+                        <li><a href="#" class="hover:text-green-500">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <i class="bi bi-instagram text-2xl hover:text-green-500 cursor-pointer"></i>
+                        <i class="bi bi-twitter text-2xl hover:text-green-500 cursor-pointer"></i>
+                        <i class="bi bi-discord text-2xl hover:text-green-500 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button').addEventListener('click', () => {
+            document.querySelector('.md\\:flex').classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
